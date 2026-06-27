@@ -80,7 +80,7 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 1 }}
       >
-        <span className="scroll-text">Scroll Down</span>
+        <span className="scroll-text">Scroll To Explore</span>
         <motion.div
           animate={{ y: [0, 25, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
