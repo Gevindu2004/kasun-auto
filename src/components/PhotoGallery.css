@@ -1,0 +1,118 @@
+.photo-gallery-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  margin-top: 6rem;
+}
+
+.gallery-slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--color-bg-secondary);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.gallery-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+}
+
+.gallery-slide:active {
+  cursor: grabbing;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* Prevents native image drag */
+}
+
+.gallery-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  border: 1px solid var(--color-glass-border);
+  color: var(--color-text);
+  cursor: pointer;
+  z-index: 10;
+  transition: all var(--transition-fast);
+}
+
+.gallery-nav-btn:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
+}
+
+.gallery-nav-btn.prev {
+  left: 1.5rem;
+}
+
+.gallery-nav-btn.next {
+  right: 1.5rem;
+}
+
+.gallery-indicators {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.gallery-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.gallery-dot.active {
+  background: var(--color-accent);
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .gallery-slider {
+    height: 350px;
+    border-radius: 1rem;
+  }
+  .gallery-nav-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .gallery-nav-btn.prev {
+    left: 0.5rem;
+  }
+  .gallery-nav-btn.next {
+    right: 0.5rem;
+  }
+}
