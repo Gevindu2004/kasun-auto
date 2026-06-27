@@ -20,6 +20,7 @@ const Hero = () => {
         className="hero-background"
         style={{ y }}
       >
+        <div className="hero-overlay-blur"></div>
         <img src="/hero_bg.png" alt="Sleek Auto AC Vent" className="hero-image" />
       </motion.div>
 
@@ -44,7 +45,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Stay Cool. <br />
+            Stay Cool.<br />
             <span className="text-gradient">Drive Comfortable.</span>
           </motion.h1>
 
